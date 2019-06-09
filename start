@@ -1,0 +1,3 @@
+echo "Made by Nikita Biryulin. Group  P3211 " 
+cat "3part.frt" - | bin/fort
+
