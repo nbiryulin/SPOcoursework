@@ -152,3 +152,14 @@ native 'exit', exit
   mov pc, [rstack]
   add rstack, 8
   jmp next
+
+native "0branch", branch0
+    pop rax
+    test rax, rax
+    jnz .skip
+    mov pc, [pc]
+    jmp next
+    .skip:
+    add pc, 8
+    jmp next
+
